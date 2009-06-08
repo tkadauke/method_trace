@@ -124,7 +124,7 @@ class Method
     @definition ||= begin
       if source.is_a?(Class)
         # if class: base class singleton methods
-        source.superclasses.each do |cls|
+        source.class_hierarchy.each do |cls|
           d = MethodTrace::MethodDefinition.definition_sites["#{cls.object_id}::#{self.name}"]
           @from = cls and return d if d
         end
@@ -135,13 +135,13 @@ class Method
       end
       
       # base class methods
-      source.class.superclasses.each do |cls|
+      source.class.class_hierarchy.each do |cls|
         d = MethodTrace::MethodDefinition.definition_sites["#{cls.object_id}##{self.name}"]
         @from = cls and return d if d
       end
       
       # module methods
-      source.reachable_modules.each do |mod|
+      source.usable_modules.each do |mod|
         d = MethodTrace::MethodDefinition.definition_sites["#{mod.object_id}##{self.name}"]
         @from = mod and return d if d
       end
