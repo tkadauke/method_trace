@@ -1,4 +1,0 @@
-= method_trace
-
-Author::    Thomas Kadauke
-Copyright:: Copyright (c) 2009 Thomas Kadauke
