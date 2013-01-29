@@ -10,7 +10,6 @@ Gem::Specification.new do |s|
   s.files     =   Dir.glob("lib/**/*")
 
   s.has_rdoc = true
-  s.extra_rdoc_files = ["README.rdoc"]
   
   s.require_path = "lib"
 end
