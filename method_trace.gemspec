@@ -4,8 +4,8 @@ Gem::Specification.new do |s|
   s.version   =   "0.0.1"
   s.date      =   Date.today.strftime('%Y-%m-%d')
   s.author    =   "Thomas Kadauke"
-  s.email     =   "tkadauke@imedo.de"
-  s.homepage  =   "http://www.imedo.de/"
+  s.email     =   "thomas.kadauke@googlemail.com"
+  s.homepage  =   "http://github.com/tkadauke/method_trace"
   s.summary   =   "Find method definition site"
   s.files     =   Dir.glob("lib/**/*")
 
